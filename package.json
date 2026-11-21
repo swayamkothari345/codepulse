@@ -1,5 +1,5 @@
 {
-  "name": "@swayamkothari345/codepulse",
+  "name": "@swayamkothari/codepulse",
   "version": "0.1.0",
   "description": "Intelligent JavaScript code health analyzer — find complexity, duplication, and code smells",
   "type": "module",

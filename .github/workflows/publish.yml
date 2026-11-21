@@ -30,6 +30,11 @@ jobs:
         run: npm test
 
       - name: Publish
-        run: npm publish
+        # GitHub Packages requires the scope to match the GitHub username,
+        # which differs from the npm username. Override only for this step.
+        run: |
+          npm pkg set name="@swayamkothari345/codepulse"
+          npm publish
+          npm pkg set name="@swayamkothari/codepulse"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

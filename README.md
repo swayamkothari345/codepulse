@@ -8,16 +8,8 @@ It works on plain JavaScript: `.js`, `.mjs`, `.cjs`, and `.jsx`. No TypeScript, 
 
 ## Installation
 
-This package is published to GitHub Packages. To install it, tell npm where to find the `@swayamkothari345` scope — either by adding a line to your project's `.npmrc`:
-
-```
-@swayamkothari345:registry=https://npm.pkg.github.com
-```
-
-Then install globally:
-
 ```bash
-npm install -g @swayamkothari345/codepulse
+npm install -g @swayamkothari/codepulse
 ```
 
 Once installed, the `codepulse` command is available everywhere.
