@@ -1,5 +1,5 @@
 {
-  "name": "codepulse",
+  "name": "@swayamkothari345/codepulse",
   "version": "0.1.0",
   "description": "Intelligent JavaScript code health analyzer — find complexity, duplication, and code smells",
   "type": "module",
@@ -37,6 +37,9 @@
   ],
   "author": "",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "engines": {
     "node": ">=18.0.0"
   },

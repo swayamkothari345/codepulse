@@ -8,15 +8,19 @@ It works on plain JavaScript: `.js`, `.mjs`, `.cjs`, and `.jsx`. No TypeScript, 
 
 ## Installation
 
-```bash
-npm install -g codepulse
+This package is published to GitHub Packages. To install it, tell npm where to find the `@swayamkothari345` scope — either by adding a line to your project's `.npmrc`:
+
+```
+@swayamkothari345:registry=https://npm.pkg.github.com
 ```
 
-Or run it once without installing:
+Then install globally:
 
 ```bash
-npx codepulse analyze .
+npm install -g @swayamkothari345/codepulse
 ```
+
+Once installed, the `codepulse` command is available everywhere.
 
 Requires Node 18 or later.
 
