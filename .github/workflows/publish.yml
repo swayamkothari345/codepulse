@@ -30,11 +30,17 @@ jobs:
         run: npm test
 
       - name: Publish
-        # GitHub Packages requires the scope to match the GitHub username,
-        # which differs from the npm username. Override only for this step.
+        # GitHub Packages requires the scope to match the GitHub username.
+        # Skip gracefully if this version is already published.
         run: |
           npm pkg set name="@swayamkothari345/codepulse"
-          npm publish
+          CURRENT=$(npm view @swayamkothari345/codepulse version --registry https://npm.pkg.github.com 2>/dev/null || echo "")
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          if [ "$CURRENT" = "$PKG_VERSION" ]; then
+            echo "Version $PKG_VERSION already published to GitHub Packages, skipping."
+          else
+            npm publish
+          fi
           npm pkg set name="@swayamkothari/codepulse"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
