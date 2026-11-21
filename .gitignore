@@ -1,0 +1,4 @@
+node_modules/
+.codepulse/
+codepulse-report.html
+*.tmp
